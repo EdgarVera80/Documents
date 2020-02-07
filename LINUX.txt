@@ -1,0 +1,202 @@
+Información de linux:
+uname -a
+cat /etc/*-release
+
+
+-------------------------------
+jhps -fea | grep tomcat
+ps -edf | grep tomcat
+ps eux | grep tomcat
+tail -f catalina.out
+
+
+chmod +x startup.sh -Poner permisos.
+
+#Permisos totales
+chmod -R ugo+rwx /ruta/directorio  
+kill -9 xxxx
+
+------- EDICION DE ARCHIVOS -----------
+>cat -Visualización
+>vi archivo.txt
+:q  -Salir del editor sin guardar los cambios.
+:q! -Se cierra el editor sin guardar los cambios.
+:wq -Guarda los cambios y cierra el editor 
+
+i   - Inserta texto a la izquierda del cursor
+a   - agrega texto a la derecha del cursor.
+ESC - Vuelve a modo comando.
+x   - Borra el caracter del cursos.
+dd  - Borra la línea actual del cursos.
+3dd - Borra 3 lineas apartide la posición actual (puede especificarse el número deseado)
+dw  - Borra una palabra.
+u   - Deshace el último cambio.
+
+yy - Copiar Línea.
+yw - Copiar una palabra
+p  - Pegar después de cursor.
+P  - Pegar antes del cursor.
+ dd
+---Movimientos--
+h   - Hacia la izquierda
+l   - Hacia la derecha
+j   - Hacia abajo
+k   - Hacia arriba
+0   - Inicio de la línea.
+$   - Fin de la línea.
+1G  - Inicio del archivo.
+G   - Fin del archivo.
+4G  - Línea 4 (Se puede especificar el número de linea deseado)
+Ctrl f - Una pantalla adelante
+ctrl b - una pantalla 
+
+
+copiar directorio recursivo
+$ cp -avr /tmp/conf/ /tmp/backup
+
+COREcautivo tacana
+
+iniciar core
+cd /app/balance/captive/mule-standalone-3.2.1/bin
+.mule start
+
+bajar core
+cd /app/balance/captive/mule-standalone-3.2.1/bin
+.mule stop
+
+COMANDOS CURL 
+curl -d @soap.xml "http://localhost:8086/UserQueryWs/ws/userQuery"
+
+
+
+-----------------MESSAGING--------------------
+
+http://200.34.113.188:9088/messaging-console
+
+
+-----------------ARCHIVOS DE LOGS------------------
+tail -200f trace.log
+:
+
+
+------------------ACTIVEMQ---------------------------
+>activemq start -Inicia el ActiveMQ
+>activemq stop  -Detiene
+>activemq restart
+
+---------------- MOBICENT---------------
+./stop_mobicents.sh
+>ps –edf | grep mobicents -Verifica si está activo.
+>ps-edf -Muestra los procesosps
+http://172.16.66.188:11099/management-console
+>./startup.sh [run.sh --host=0.0.0.0 >/dekillv/null 2>&1 &]
+>./stop_mobicents.sh [/app/messaging/mobicents-jainslee-server-1.2.4.GA-jboss-4.2.3.GA/jboss-4.2.3.GA/bin/shutdown.sh -S -s 172.16.66.188:11099]
+
+http://200.34.113.188:8161/admin/
+http://200.34.113.188:8001/inject_mo
+http://200.34.113.188:8182/management-console
+
+
+-------------------------------------
+------------------SFTP---------------
+-------------------------------------
+>sftp ip
+>put directorioLocal\archivo direactorioRemoto
+
+
+http://200.34.113.188:8182/management-console
+
+
+
+------------------ CURSO LINUX ------------------
+El  pipe "|" sirver para concatenar la salida de un comando y convertirlo en entrada de otro. ejemplo:
+>ls - la /tmp | more
+
+Comando grep filtra cadenas de caracteres.
+>ls -la | grep xyc
+>grep zeus /etc/host  "Buscar la palabra zeus dentreo del archivo host"
+>ls - la *.gz | grep xzy "Busca todos los archivo que tenga en el nombre xyz y que su extención gz"
+
+Comando man + comando "muestra las ayudas del comando especificado"
+Comando cat: muestra el contenido de un archivo.
+Comando head: muestra las primeras líneas de un archivo con el modificador  -n 200
+Comnado tail:
+Comnado strings: busca textos dentro de un archivo binario
+Comando which: Sirve para saber si un comando está instalado.
+Comando who: muestra que usuarios está conectados al sistema operativo y por que medio está conectados (consola, ssh, etc.)
+Comando lsof: muestra los archivo abierto a partir de un directorio.
+
+Check list para servisar un servidor:
+Comando df: /dev/ "la carpta dev se almacenan la lista de dispositovos"
+Comando du - h /* "lista la cantidad en megas o gigas de las carpta que están de bajo de la raíz"
+Comando du - hs /* "lista la cantidad en megas o gigas haciendo la suma del tamaño por carpetas"
+Comando free "Muestra información sobre la memoria"
+Comando top "Muestra una lista de proceso que se están ejecutando en tiempo real"
+Comando ps "Lista los proceso del sistema"
+Coamndo service ssh status "Muestra el status del servicio ssh", modificadores [status, start, stop]
+
+Creación de usuarios
+
+useradd - g users -G wheel user5
+-g : indica el grupo principal
+-G : Grupos adicionales separados por comas 
+user5 es el nombre del usuario que se creará.
+
+usermod: para modificar un usuario
+passwd user1 "para crearle o modificar el password de un usuario"
+
+
+En el director etc "están todos los archivos de configuración del sistema operativo"
+director sysconfig "Contiene los archivos de configuración del sistema"
+
+ifconfig "archivo para configurar los dispositivos de red"
+>ifconfig -a "Muestra todas las tarjetas de red"
+
+comando rout add default gw 182.168.1.253 eth0 "para configurar las rutas para el dispositvo eth0"
+
+dgtobias@gmailg
+
+
+
+Actualizar ubuntu:
+apt-get update
+
+
+Descargar zip (Primero se debe actualizar)
+apt install unzip
+
+--------------------------------
+Descomprimir
+
+tar xvf archivo.tar
+unzip file.zip
+
+------------------------------
+abrir puertos
+sudo iptables -A INPUT -p tcp --dport 8981 -j ACCEPT
+
+borrar dir
+rm -R dirname
+
+**************************************************************************************************
+
+
+crear java_home
+
+SET JAVA_HOME=/ruta/
+
+Instala VI editor
+apt-get install vim
+
+
+
+
+
+
+
+
+
+
+
+
+

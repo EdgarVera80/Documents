@@ -1,0 +1,6 @@
+E:\environment\apache-maven-3.1.1\bin>mvn org.mule.tools:mule-project-archetype:3.3.1:create -DartifactId=mule-xxxx -DgroupId=mule.com -Dversion=1.00.00 -DmuleVersion=3.3.1
+
+Instalar jar en el repositorio:
+mvn install:install-file -Dfile=toInstall/CaptiveWebClient.jar -DgroupId=com.citi.captive.core -DartifactId=CaptiveWebClient -Dversion=1.0 -Dpackaging=jar
+
+mvn install:install-file -Dfile=ojdbc6.jar -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0.3 -Dpackaging=jar
