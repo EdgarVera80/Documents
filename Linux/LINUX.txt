@@ -183,7 +183,7 @@ rm -R dirname
 
 crear java_home
 
-SET JAVA_HOME=/ruta/
+export JAVA_HOME=/ruta/
 
 Instala VI editor
 apt-get install vim
@@ -195,8 +195,18 @@ apt-get install vim
 
 
 
+------------
+Oracle instalation
+
+Puerto1: 10080
+Puerto default:1521
+Password: angluzmetal
 
 
+--------------
+
+Linux local
+Password: angluzmetal
 
 
 
